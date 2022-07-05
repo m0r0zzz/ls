@@ -1,3 +1,14 @@
+/**
+ *   @file ls.c
+ *   @brief Custom version of coreutils 'ls' utility
+ *   @version 1.0a
+ *   @author Kareev Kirill <morozzz.g2@gmail.com>
+ *   @date 2022
+ *   @copyright GNU GPL 3
+ *
+ *  This version of 'ls' supports 'long' mode (-l) and 'all' mode (-a)
+ *
+ */
 #include <unistd.h>
 #include <stdlib.h>
 #include <stdio.h>
