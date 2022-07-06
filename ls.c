@@ -170,7 +170,7 @@ int path_def_print(struct path_def *self, int is_long, int is_show_hidden) {
 	
 	closedir(dir);
     } else {
-	print_one_dent(self->path, &self->stat);
+	print_one_dent(self->path, is_long ? &self->stat : NULL);
     }
     return fret;
 }
@@ -235,7 +235,7 @@ int main(int argc, char** argv){
 	if(path_defs[i].is_valid && S_ISDIR(path_defs[i].stat.st_mode)){
 	    //prefix with empty line if this path is not first
 	    if(i > 0){
-		puts("\n");
+		puts("");
 	    }
 	    //print path if there is multiple paths
 	    if(paths_num > 1){
